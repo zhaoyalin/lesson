@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../libs/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="../libs/qunit/qunit-1.18.0.css"></head>
+	<script src="../libs/jquery.min.js"></script>
+	<script src="../libs/jquery.storageapi.min.js"></script>
+	<script src="../libs/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../libs/plugin/jquery.validate.min.js"></script>
+    <script src="../libs/plugin/jquery.form.min.js"></script>
+    <script src="../libs/plugin/jquery.metadata.js"></script>
+    <script src="../libs/plugin/localization/messages_zh.min.js"></script>
+    <script src="app.js"></script>
+    <title>calculator</title>
+</head>
+<body>
+<div data-role="page" class="ui-page-theme-a" id="pgAppHome" data-title="应用">
+	<div data-role="header" data-position="fixed" data-theme="a">
+		<h1>我的应用</h1>
+	</div>
+	<div data-role="main" class="ui-content">
+	   <div id="dialog"></div>
+	</div>
+  <div data-role="footer" data-position="fixed" data-theme="a">
+	<textarea id="userText"></textarea>
+	<h1 id="sayBtn" class="ui-bar ui-bar-a ui-corner-all" >说</h1>
+	<h1 id="clearBtn" class="ui-bar ui-bar-a ui-corner-all" >清除</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#pgAppHome" data-prefetch="true" data-transition="flip">应用</a></li>
+        <li><a href="#pgUserHome" data-prefetch="true" data-transition="flip">用户管理</a></li>
+        <li><a href="#pgTestHome" data-prefetch="true" data-transition="flip">测试</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div data-role="page" class="ui-page-theme-a" id="pgUserHome" data-title="用户管理">
+	<div data-role="header" data-position="fixed" data-theme="a">
+		<h1>用户管理</h1>
+	</div>
+	<div data-role="main" class="ui-content">
+	</div>
+  <div data-role="footer" data-position="fixed" data-theme="a">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#pgAppHome" data-prefetch="true" data-transition="flip">应用</a></li>
+        <li><a href="#pgUserHome" data-prefetch="true" data-transition="flip">用户管理</a></li>
+        <li><a href="#pgTestHome" data-prefetch="true" data-transition="flip">测试</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div data-role="page" class="ui-page-theme-a" id="pgTestHome" data-title="测试">
+	<div data-role="header" data-position="fixed" data-theme="a">
+		<h1>测试</h1>
+	</div>
+	<div data-role="main" class="ui-content">
+	  <div id="qunit"></div>
+	  <div id="qunit-fixture"></div>
+	</div>
+  <div data-role="footer" data-position="fixed" data-theme="a">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#pgAppHome" data-prefetch="true" data-transition="flip">应用</a></li>
+        <li><a href="#pgUserHome" data-prefetch="true" data-transition="flip">用户管理</a></li>
+        <li><a href="#pgTestHome" data-prefetch="true" data-transition="flip">测试</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+  <script src="../libs/qunit/qunit-1.18.0.js"></script>
+  <script src="appTest.js"></script>
+</html>
